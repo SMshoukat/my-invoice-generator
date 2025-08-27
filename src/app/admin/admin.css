@@ -1,0 +1,78 @@
+/* Base styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0e0e10;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Admin layout */
+.admin-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #f4cc53;
+  border-left: 4px solid #f4cc53;
+  padding-left: 1rem;
+}
+
+/* Stat cards */
+.admin-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.admin-card {
+  flex: 1;
+  min-width: 250px;
+  background-color: #1a1a1d;
+  border: 1px solid #2a2a2e;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(255, 193, 7, 0.15);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.25);
+}
+
+.admin-card h3 {
+  font-size: 1.2rem;
+  color: #f4cc53;
+  margin-bottom: 0.5rem;
+}
+
+.admin-card p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Loader */
+.admin-loader {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-cards {
+    flex-direction: column;
+  }
+
+  .admin-title {
+    font-size: 1.5rem;
+  }
+}

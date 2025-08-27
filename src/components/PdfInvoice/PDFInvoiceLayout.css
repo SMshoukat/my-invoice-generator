@@ -1,0 +1,287 @@
+/* .pdf-invoice-wrapper {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  color: #333;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.invoice-header {
+  background: linear-gradient(135deg, #0a2a66, #0f4f97);
+  color: white;
+  padding: 30px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.invoice-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.invoice-number {
+  font-size: 16px;
+}
+
+.invoice-bill-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 10px 0;
+}
+
+.invoice-bill-section p {
+  margin: 4px 0;
+}
+
+.invoice-date {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.invoice-date-due {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.invoice-table-pdf {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.invoice-table-pdf th {
+  background-color: #0a2a66;
+  color: white;
+  padding: 10px;
+}
+
+.invoice-table-pdf td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.invoice-subtotal {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #0a2a66;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.invoice-subtotal span:last-child {
+  margin-left: 20px;
+}
+
+.invoice-note {
+  margin-bottom: 20px;
+}
+
+.note-line {
+  border-bottom: 1px solid #aaa;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.invoice-payment {
+  margin-bottom: 30px;
+}
+
+.invoice-thankyou {
+  font-size: 26px;
+  font-weight: bold;
+  color: #0a2a66;
+  text-align: right;
+}
+.date-pdf {
+  display: flex;
+  flex-direction: column;
+}
+.pdf-logo {
+  max-width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+.payment-terms-pdf {
+  margin: 12px 0;
+  font-size: 14px;
+}
+ */
+
+/* PDFInvoiceLayout.css */
+
+.pdf-invoice-wrapper {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.pdf-logo {
+  max-width: 150px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.invoice-title {
+  font-weight: 700;
+  font-size: 24px;
+  color: #444;
+}
+
+.invoice-number {
+  font-weight: 600;
+  font-size: 14px;
+  color: #444;
+  margin-top: 8px;
+}
+
+.invoice-bill-section {
+  display: flex;
+  justify-content: space-between;
+  background: #f1f1f1;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #555;
+}
+
+.invoice-bill-section > div {
+  width: 32%;
+}
+
+.invoice-bill-section strong {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #333;
+}
+
+.date-pdf {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 11px;
+  color: #555;
+}
+
+.payment-terms-pdf {
+  font-size: 11px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.invoice-table-pdf {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 11px;
+}
+
+.invoice-table-pdf th,
+.invoice-table-pdf td {
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.invoice-table-pdf th {
+  background: #eee;
+  font-weight: 600;
+}
+
+.invoice-table-pdf tbody tr:hover {
+  background-color: #fafafa;
+}
+
+.invoice-subtotal {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 700;
+  font-size: 12px;
+}
+.payment-total{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.invoice-subtotal span {
+  width: 100px;
+  text-align: right;
+}
+
+.invoice-note {
+  font-size: 11px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.note-line {
+  border-top: 1px solid #ddd;
+  margin: 6px 0;
+  width: 100%;
+}
+
+.invoice-thankyou {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: right;
+  color: #333;
+}
+.upr-date{
+  margin-top: 5px;
+}
+
+/* Optional: Responsive for smaller widths */
+@media print, (max-width: 700px) {
+  .pdf-invoice-wrapper {
+    padding: 10px;
+  }
+
+  .invoice-bill-section {
+    flex-direction: column;
+  }
+
+  .invoice-bill-section > div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .date-pdf {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .invoice-subtotal {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .invoice-subtotal span {
+    width: auto;
+    text-align: left;
+  }
+}
